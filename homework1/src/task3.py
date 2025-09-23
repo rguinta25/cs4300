@@ -1,5 +1,6 @@
 import math
 def check_num(num):
+    # Return whether a number is positive, negative, or 0
     result = ""
     if num > 0:
         result = "positive"
@@ -7,11 +8,10 @@ def check_num(num):
         result = "negative"
     elif num == 0:
         result = "zero"
-    else:
-        result == "not a number"
     return result
 
 def print_prime_nums():
+    # Return first 10 prinme numbers
     prime = []
     num = 2 
     while len(prime) < 10:
@@ -24,6 +24,7 @@ def print_prime_nums():
     return prime
 
 def get_sum():
+    # Return the sum of numbers from 0-100
     num = 0
     result = 0
     while num <= 100:

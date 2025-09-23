@@ -1,5 +1,6 @@
-def main():
-    print("Hello, World!")
+def hello_world():
+    return "Hello, World!"
 
 if __name__ == "__main__":
-    main()
+    print(hello_world())
+    # Output: Hello, World!
