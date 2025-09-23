@@ -1,13 +1,17 @@
-def fav_books():
-    books = [
-        "A Tale of Two Cities by Charles Dickens", 
-        "The Alchemest by Paulo Coelho", 
-        "Harry Potter by J. K. Rowling",
-        "Diary of a Wimpy Kid by Jeff Kinney",
-        "Green Eggs and Hamm by Dr. Seuss"]
+import sys
+import os
+import pytest
 
-     print(books[:3])
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
-if __name__ == "__main__":
-    fav_books()
+import task5
 
+
+def test_books():
+    assert task5.fav_books() == ['A Tale of Two Cities by Charles Dickens', 
+    'The Alchemest by Paulo Coelho', 
+    'Harry Potter by J. K. Rowling']
+
+def test_student():
+    assert task5.student(2) == "Rayne Guinta"
+    assert task5.student(5) == "student doesn't exist"
