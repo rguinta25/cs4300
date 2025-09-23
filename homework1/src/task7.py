@@ -2,6 +2,19 @@ import numpy as np
 
 def calculate_grades(nums):
 
+    """
+    Calculate the mean and median of grades in class
+
+    Parameters:
+        nums: list of numbers
+    
+    Returns:
+        list: with mean and median
+
+    Raises:
+        ValueError: If the input list is empty
+    """
+
     if not nums:
         raise ValueError("No numbers provided")
 

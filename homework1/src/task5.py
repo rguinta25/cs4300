@@ -1,4 +1,7 @@
 def fav_books():
+    """
+    Return the top three books in my favorite books list
+    """
     books = [
         "A Tale of Two Cities by Charles Dickens", 
         "The Alchemest by Paulo Coelho", 
@@ -9,6 +12,14 @@ def fav_books():
     return books[:3]
 
 def student(id):
+    """
+    Return the student name for the ID given
+
+    Parameter:
+        student_id: ID of the student
+
+    Returns: Name of student or "student doesnt exist"
+    """
     student_dict = {
         "Carl Jones" : 1,
         "Rayne Guinta" : 2,

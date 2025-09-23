@@ -1,4 +1,17 @@
 def calclulate_discount(price, discount):
+    """
+    Calculate the discounted price
+
+    Parameters:
+        price: Original price
+        discount: Percentage 0-100
+
+    Returns:
+        Price after discount
+    
+    Raises:
+        ValueError if discount is out of bounds
+    """
     if discount < 0 or discount > 100:
         raise ValueError("No valid discount provided")
     return price - (price * (discount * 0.01))
