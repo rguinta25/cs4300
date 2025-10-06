@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e$l7o3a3i@mkzv10%!^t1c&e43c$9mgilnfkns)g%1jbde$u9r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'editor-rguinta-19.devedu.io']
 
 
 # Application definition
