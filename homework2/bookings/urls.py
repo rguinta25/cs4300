@@ -8,8 +8,8 @@ router.register(r'seats', SeatViewSet)
 router.register(r'bookings', BookingViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('api/', include(router.urls)), 
     path('', movie_list, name='movie_list'),
-    path('book/<int:movie_id>/', book_seat, name='book_seat'),
+    path('book/<int:movie_id>/', book_seat, name='book_seat'),  # matches /book/1/
     path('history/', booking_history, name='booking_history'),
 ]

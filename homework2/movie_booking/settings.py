@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,14 +27,16 @@ SECRET_KEY = 'django-insecure-h7%lfgza4xwiar-(bi891d0ifpc$5-gp+5m8j#94p_)lmm7sb0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['editor-rguinta-19.devedu.io',
-    'app-rguinta-19.devedu.io',
+ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1']
+    '127.0.0.1',
+    'app-rguinta-19.devedu.io',  # DevEdu
+    'your-app-name.onrender.com'  # Render
+    ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://editor-rguinta-19.devedu.io',
-    'https://app-rguinta-19.devedu.io'
+    'https://app-rguinta-19.devedu.io',
+    'https://booking_app.onrender.com',
 ]
 # Application definition
 
@@ -56,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
 
 ROOT_URLCONF = 'movie_booking.urls'
@@ -83,10 +87,10 @@ WSGI_APPLICATION = 'movie_booking.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://postgres:postgres@localhost:5432/movie_booking',
+        conn_max_age=600
+    )
 }
 
 
@@ -124,8 +128,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+
 STATIC_URL = 'static/'
 
+iif not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

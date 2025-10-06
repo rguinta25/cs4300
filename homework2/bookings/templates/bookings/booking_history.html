@@ -1,12 +1,19 @@
 {% extends 'bookings/base.html' %}
 {% block title %}Booking History{% endblock %}
+
 {% block content %}
 <h2>Your Booking History</h2>
+
+<!-- Back to Movies Button -->
+<a href="{% url 'movie_list' %}" class="btn btn-primary mb-3">Back to Movies</a>
+
 <ul class="list-group">
     {% for booking in bookings %}
     <li class="list-group-item">
         <strong>{{ booking.movie.title }}</strong> - Seat: {{ booking.seat.seat_number }} - Date: {{ booking.booking_date }}
     </li>
+    {% empty %}
+    <li class="list-group-item">You have no bookings yet.</li>
     {% endfor %}
 </ul>
 {% endblock %}
