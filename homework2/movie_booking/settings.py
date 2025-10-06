@@ -26,11 +26,15 @@ SECRET_KEY = 'django-insecure-h7%lfgza4xwiar-(bi891d0ifpc$5-gp+5m8j#94p_)lmm7sb0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['editor-rguinta-19.devedu.io',  # your DevEdu host
+ALLOWED_HOSTS = ['editor-rguinta-19.devedu.io',
+    'app-rguinta-19.devedu.io',
     'localhost',
     '127.0.0.1']
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://editor-rguinta-19.devedu.io',
+    'https://app-rguinta-19.devedu.io'
+]
 # Application definition
 
 INSTALLED_APPS = [
