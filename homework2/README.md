@@ -1,7 +1,12 @@
 # Booking App
 
-Table of Contents
--[Description](#description)
+Table of Contents:
+- [Description](#Description)
+- [Features](#Features)
+- [Requirements](#Requirements)
+- [Setup](#Setup)
+- [Usage](#Usage)
+- [Testing](#Testing)
 
 ## Description
 A Django-based Movie Theater Booking app that allows users to:
