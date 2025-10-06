@@ -1,0 +1,16 @@
+{% extends "bookings/base.html" %}
+{% block title %}Seat Booking{% endblock %}
+
+{% block content %}
+<h2>Seats for {{ movie.title }}</h2>
+<ul class="list-group">
+    {% for seat in seats %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Seat {{ seat.seat_number }}
+            {% if seat.booking_status %}
+                <span class="badge bg-banner">Booked</span>
+            {% else %}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
