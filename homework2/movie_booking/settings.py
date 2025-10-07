@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'app-rguinta-19.devedu.io',  # DevEdu
-    '.onrender.com'  # Render
+    'movie_booking.onrender.com'  # Render
     ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'movie_booking.urls'
 
