@@ -7,7 +7,7 @@ Table of Contents:
 - [Setup](#Setup)
 - [Usage](#Usage)
 - [Testing](#Testing)
-- [Render Deployment](#Render_Deployment)
+- [Deployment](#Deployment)
 
 ## Description
 A Django-based Movie Theater Booking app that allows users to:
@@ -56,5 +56,5 @@ python manage.py runserver 0.0.0.0:3000
 ## Testing
 python manage.py test bookings
 
-## Render Deployment
+## Deployment
 https://movie-booking-xn9c.onrender.com/
