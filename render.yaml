@@ -9,7 +9,7 @@ services:
     name: movie_booking
     runtime: python
     buildCommand: './build.sh'
-    startCommand: 'cd homework2 && PYTHONPATH=. python movie_booking/create_admin.py && python -m gunicorn movie_booking.asgi:application -k uvicorn.workers.UvicornWorker'
+    startCommand: "cd homework2 && python -m gunicorn movie_booking.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:

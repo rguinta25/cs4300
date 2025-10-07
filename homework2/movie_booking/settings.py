@@ -27,13 +27,8 @@ SECRET_KEY = 'django-insecure-h7%lfgza4xwiar-(bi891d0ifpc$5-gp+5m8j#94p_)lmm7sb0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'movie-booking-xn9c.onrender.com',  # Render
-    ]
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://movie-booking-xn9c.onrender.com',
-]
+ALLOWED_HOSTS = ['movie-booking-xn9c.onrender.com', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://movie-booking-xn9c.onrender.com']
 # Application definition
 
 INSTALLED_APPS = [
