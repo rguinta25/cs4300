@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -o errexit
 
+cd homework2
+
 pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
