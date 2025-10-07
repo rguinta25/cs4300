@@ -28,14 +28,10 @@ SECRET_KEY = 'django-insecure-h7%lfgza4xwiar-(bi891d0ifpc$5-gp+5m8j#94p_)lmm7sb0
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    'app-rguinta-19.devedu.io',  # DevEdu
     'movie-booking-xn9c.onrender.com',  # Render
     ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://app-rguinta-19.devedu.io',
     'https://movie-booking-xn9c.onrender.com',
 ]
 # Application definition
