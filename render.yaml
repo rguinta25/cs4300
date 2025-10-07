@@ -2,7 +2,6 @@ databases:
   - name: movie_theater_db
     plan: free
     databaseName: movie_booking
-    user: postgres
 
 services:
   - type: web
