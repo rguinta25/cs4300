@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'app-rguinta-19.devedu.io',  # DevEdu
-    'movie_booking.onrender.com'  # Render
+    'movie-booking-xn9c.onrender.com',  # Render
     ]
 
 CSRF_TRUSTED_ORIGINS = [
